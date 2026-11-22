@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "ScreenWise AI",
+    "slug": "screenwise-ai",
+    "version": "1.0.0",
+    "scheme": "screenwise-ai",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.screenwise.ai"
+    },
+    "android": {
+      "package": "com.screenwise.ai",
+      "adaptiveIcon": {
+        "backgroundColor": "#0A2540",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ScreenWise AI needs photo access to select screenshots for AI analysis.",
+          "cameraPermission": "ScreenWise AI needs camera access to capture screens for AI analysis."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
